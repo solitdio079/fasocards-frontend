@@ -134,7 +134,7 @@ export default function Root() {
               <img width="120" src={logo}></img>
             </NavLink>
           </div>
-          <div className="hidden lg:flex-none">
+          <div className="hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               <li>
                 <NavLink
