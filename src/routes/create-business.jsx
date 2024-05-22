@@ -34,7 +34,7 @@ export async function action({ request }) {
 }
 
 export default  function CreateBusiness() {
-    const [user] =  useOutletContext()
+    const [user] = useOutletContext()
     console.log(user);
     const navigation = useNavigation()
     return (

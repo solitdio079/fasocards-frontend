@@ -20,7 +20,7 @@ export default function Root() {
                     'https://fasocards.onrender.com',
                   'Access-Control-Allow-Credentials': 'true',
                   'Content-Type': 'application/json',
-                  Accept: 'application/json',
+                  'Accept': 'application/json',
                 },
               }
             )
@@ -79,21 +79,24 @@ export default function Root() {
                   {user ? `Mes Business` : 'Se Connecter'}
                 </NavLink>
               </li>
-
-              <li>
-                <NavLink
-                  to={'/create/business'}
-                  className={({ isActive, isPending }) =>
-                    isActive
-                      ? 'bg-primary text-white'
-                      : isPending
-                      ? 'bg-neutral text-neutral-content'
-                      : ''
-                  }
-                >
-                  Enregistrer un business
-                </NavLink>
-              </li>
+              {user ? (
+                <li>
+                  <NavLink
+                    to={'/create/business'}
+                    className={({ isActive, isPending }) =>
+                      isActive
+                        ? 'bg-primary text-white'
+                        : isPending
+                        ? 'bg-neutral text-neutral-content'
+                        : ''
+                    }
+                  >
+                    Enregistrer un business
+                  </NavLink>
+                </li>
+              ) : (
+                ''
+              )}
             </ul>
           </div>
         </div>
