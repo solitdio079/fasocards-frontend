@@ -45,7 +45,7 @@ export default function Root() {
     return (
       <>
         <div className="navbar bg-base-100">
-          <div className="navbar-start lg:hidden">
+          <div className="navbar-start lg:hidden ">
             <div className="dropdown">
               <div tabIndex={0} role="button" className="btn btn-ghost">
                 <svg
@@ -124,7 +124,7 @@ export default function Root() {
               <img width="120" src={logo}></img>
             </NavLink>
           </div>
-          <div className="hidden lg:flex">
+          <div className="hidden lg:flex lg:flex-1">
             <NavLink
               to="/"
               className={({ isActive, isPending }) =>
@@ -134,7 +134,7 @@ export default function Root() {
               <img width="120" src={logo}></img>
             </NavLink>
           </div>
-          <div className="hidden lg:flex">
+          <div className="hidden lg:flex lg:flex-none">
             <ul className="menu menu-horizontal px-1">
               <li>
                 <NavLink
