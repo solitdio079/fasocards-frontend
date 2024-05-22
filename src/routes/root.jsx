@@ -17,8 +17,7 @@ export default function Root() {
                      mode: 'cors',
                      credentials: 'include',
                      headers: {
-                       'Access-Control-Allow-Origin':
-                         'https://fasocards.onrender.com',
+                       'Access-Control-Allow-Origin': 'fasocards.onrender.com',
                        'Access-Control-Allow-Credentials': 'true',
                        'Content-Type': 'application/json',
                        Accept: 'application/json',
