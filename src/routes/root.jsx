@@ -7,6 +7,7 @@ export default function Root() {
     const isConnected = Boolean(user)
     useEffect(() => {
         const fetchUser = async () => {
+            console.log("Inside fetch user");
             if(isConnected) return
             const response = await fetch(
               'https://fasocards.onrender.com/auth/status',
