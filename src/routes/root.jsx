@@ -115,6 +115,14 @@ export default function Root() {
                 )}
               </ul>
             </div>
+            <NavLink
+              to="/"
+              className={({ isActive, isPending }) =>
+                isActive ? 'bg-primary' : isPending ? 'bg-neutral' : ''
+              }
+            >
+              <img width="120" src={logo}></img>
+            </NavLink>
           </div>
           <div className="hidden lg:flex-1">
             <NavLink
@@ -126,7 +134,7 @@ export default function Root() {
               <img width="120" src={logo}></img>
             </NavLink>
           </div>
-          <div className="flex-none">
+          <div className="hidden lg:flex-none">
             <ul className="menu menu-horizontal px-1">
               <li>
                 <NavLink
