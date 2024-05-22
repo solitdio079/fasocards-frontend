@@ -26,7 +26,7 @@ export default function Root() {
             )
 
             const newUser = await response.json()
-           
+            console.log(newUser);
             if (!newUser.status) {
                 console.log(newUser)
                 setUser(newUser)
