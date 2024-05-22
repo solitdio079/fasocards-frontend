@@ -124,7 +124,7 @@ export default function Root() {
               <img width="120" src={logo}></img>
             </NavLink>
           </div>
-          <div className="hidden lg:flex-1">
+          <div className="hidden lg:flex">
             <NavLink
               to="/"
               className={({ isActive, isPending }) =>
