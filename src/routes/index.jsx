@@ -1,5 +1,6 @@
 import hero1 from '../assets/hero1.jpeg'
 import hero2 from '../assets/hero2.jpeg'
+import hero3 from '../assets/hero2.jpeg'
 
 export default function Index() {
     return (
@@ -8,7 +9,7 @@ export default function Index() {
           className="hero min-h-screen"
           style={{
             backgroundImage:
-              `url(${hero2})`,
+              `url(${hero3})`,
           }}
         >
           <div className="hero-overlay bg-opacity-60"></div>
