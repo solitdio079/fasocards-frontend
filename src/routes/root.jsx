@@ -20,7 +20,7 @@ export default function Root() {
                        'Access-Control-Allow-Origin': 'fasocards.onrender.com',
                        'Access-Control-Allow-Credentials': 'true',
                        'Content-Type': 'application/json',
-                       Accept: 'application/json',
+                       'Accept': 'application/json',
                      },
                    }
                  )
