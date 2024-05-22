@@ -8,29 +8,36 @@ export default function Root() {
     useEffect(() => {
         const fetchUser = async () => {
             console.log("Inside fetch user");
-            if(isConnected) return
-            const response = await fetch(
-              'https://fasocards.onrender.com/auth/status',
-              {
-                method: 'GET',
-                mode: 'cors',
-                credentials: 'include',
-                headers: {
-                  'Access-Control-Allow-Origin':
-                    'https://fasocards.onrender.com',
-                  'Access-Control-Allow-Credentials': 'true',
-                  'Content-Type': 'application/json',
-                  'Accept': 'application/json',
-                },
-              }
-            )
-
-            const newUser = await response.json()
-            console.log(newUser);
-            if (!newUser.status) {
-                console.log(newUser)
-                setUser(newUser)
+            if (isConnected) return
+            try {
+                 const response = await fetch(
+                   'https://fasocards.onrender.com/auth/status',
+                   {
+                     method: 'GET',
+                     mode: 'cors',
+                     credentials: 'include',
+                     headers: {
+                       'Access-Control-Allow-Origin':
+                         'https://fasocards.onrender.com',
+                       'Access-Control-Allow-Credentials': 'true',
+                       'Content-Type': 'application/json',
+                       Accept: 'application/json',
+                     },
+                   }
+                 )
+                 const newUser = await response.json()
+                 console.log(newUser)
+                 if (!newUser.status) {
+                   console.log(newUser)
+                   setUser(newUser)
+                 }
+                
+            } catch (error) {
+                console.log(error);
             }
+           
+
+           
             
         }
         fetchUser()
