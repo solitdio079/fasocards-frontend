@@ -116,7 +116,7 @@ export default function Root() {
               </ul>
             </div>
           </div>
-          <div className="flex-1">
+          <div className="hidden lg:flex-1">
             <NavLink
               to="/"
               className={({ isActive, isPending }) =>
