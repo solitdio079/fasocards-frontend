@@ -115,16 +115,8 @@ export default function Root() {
                 )}
               </ul>
             </div>
-            <NavLink
-              to="/"
-              className={({ isActive, isPending }) =>
-                isActive ? 'bg-primary' : isPending ? 'bg-neutral' : ''
-              }
-            >
-              <img width="120" src={logo}></img>
-            </NavLink>
           </div>
-          <div className="hidden lg:flex">
+          <div className="flex-1">
             <NavLink
               to="/"
               className={({ isActive, isPending }) =>
