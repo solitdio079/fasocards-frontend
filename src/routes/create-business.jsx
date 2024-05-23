@@ -62,10 +62,7 @@ export default  function CreateBusiness() {
             required
           ></textarea>
         </label>
-        <label className="input input-bordered flex items-center gap-2 m-3">
-          Owner
-          <input type="text" className="grow" value={JSON.stringify(user)} readOnly/>
-        </label>
+      
 
         <label className="input input-bordered flex items-center gap-2 m-3">
           <FaLink /> Site Web
