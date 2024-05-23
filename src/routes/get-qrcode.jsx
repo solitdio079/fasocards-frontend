@@ -48,13 +48,13 @@ export default function GetQRCode() {
               type="text"
               placeholder="Type here"
               className="input input-bordered w-full max-w-xs"
-              value={`http://localhost:5173/business/${name}`}
+              value={`https://fasocard.com/business/${name}`}
               readOnly
             />
             <button
               onClick={() => {
                 navigator.clipboard.writeText(
-                  `http://localhost:5173/business/${name}`
+                  `https://fasocard.com//business/${name}`
                 )
                 setCopied(true)
                 
