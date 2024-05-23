@@ -24,7 +24,7 @@ export default function Index() {
             </p>
             <button className="btn btn-primary">
               <NavLink
-                to={user ? `/list/${user.email}` : '/login'}
+                to={user ? `/create/business` : '/login'}
                 className={({ isActive, isPending }) =>
                   isActive
                     ? 'bg-primary text-white'
@@ -33,7 +33,7 @@ export default function Index() {
                     : ''
                 }
               >
-                {user ? `Mes Business` : 'Se Connecter'}
+                {user ? `Ajouter un business` : 'Se Connecter'}
               </NavLink>
             </button>
           </div>
