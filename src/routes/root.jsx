@@ -11,7 +11,7 @@ export default function Root() {
             if (isConnected) return
             try {
                  const response = await fetch(
-                   'https://api.fasocard.com//auth/status',
+                   'https://api.fasocard.com/auth/status',
                    {
                      method: 'GET',
                      mode: 'cors',
