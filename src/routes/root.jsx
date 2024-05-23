@@ -11,16 +11,16 @@ export default function Root() {
             if (isConnected) return
             try {
                  const response = await fetch(
-                   'https://fasocards.onrender.com/auth/status',
+                   'https://api.fasocard.com//auth/status',
                    {
                      method: 'GET',
                      mode: 'cors',
                      credentials: 'include',
                      headers: {
-                       'Access-Control-Allow-Origin': 'fasocards.onrender.com',
+                       'Access-Control-Allow-Origin': 'fasocard.com',
                        'Access-Control-Allow-Credentials': 'true',
                        'Content-Type': 'application/json',
-                       'Accept': 'application/json',
+                       Accept: 'application/json',
                      },
                    }
                  )

@@ -6,13 +6,13 @@ import { FaCheck } from "react-icons/fa6"
 export async function loader({ params }) {
     try {
          const response = await fetch(
-           `https://fasocards.onrender.com/business/getQRcode/${params.name}`,
+           `https://api.fasocard.com/business/getQRcode/${params.name}`,
            {
              method: 'GET',
              mode: 'cors',
              credentials: 'include',
              headers: {
-               'Access-Control-Allow-Origin': 'https://fasocards.onrender.com',
+               'Access-Control-Allow-Origin': 'https://api.fasocard.com',
                'Access-Control-Allow-Credentials': 'true',
                'Content-Type': 'application/json',
                Accept: 'application/json',

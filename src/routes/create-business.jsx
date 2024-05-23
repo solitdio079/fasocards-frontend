@@ -8,20 +8,17 @@ export async function action({ request }) {
     const bodyObject = Object.fromEntries(body)
   
     try {
-        const response = await fetch(
-          'https://fasocards.onrender.com/business/',
-          {
-            method: 'POST',
-            mode: 'cors',
-            credentials: 'include',
-            headers: {
-              'Access-Control-Allow-Origin': 'https://fasocards.onrender.com',
-              'Access-Control-Allow-Credentials': 'true',
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(bodyObject),
-          }
-        )
+        const response = await fetch('https://api.fasocard.com/business/', {
+          method: 'POST',
+          mode: 'cors',
+          credentials: 'include',
+          headers: {
+            'Access-Control-Allow-Origin': 'https://api.fasocard.com',
+            'Access-Control-Allow-Credentials': 'true',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(bodyObject),
+        })
         const newBusiness = await response.json()
         console.log(newBusiness);
         if (!newBusiness.name) throw new Error(newBusiness[0].msg)

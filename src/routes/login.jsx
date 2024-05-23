@@ -5,7 +5,7 @@ export async function action({request}) {
     const formData = await request.formData()
     const email = formData.get("email")
     const sendEmail = await fetch(
-      'https://fasocards.onrender.com/auth/login/email',
+      'https://api.fasocard.com//auth/login/email',
       {
         method: 'POST',
         headers: {
