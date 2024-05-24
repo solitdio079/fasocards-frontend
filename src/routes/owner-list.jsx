@@ -4,7 +4,7 @@ import hero1 from '../assets/hero1.jpeg'
 export default function OwnerList() {
     return (
       <>
-        <div className="flex m-5 items-center justify-between">
+        <div className="flex m-5 items-center justify-between flex-wrap">
           <div className="card w-1/3 bg-base-100 shadow-xl image-full">
             <figure>
               <img
