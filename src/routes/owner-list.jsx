@@ -4,28 +4,19 @@ import hero1 from '../assets/hero1.jpeg'
 export default function OwnerList() {
     return (
       <>
-        <div className="flex-col">
-          <div className="card lg:card-side bg-base-100 shadow-xl">
+        <div className="flex">
+          <div className="card w-96 bg-base-100 shadow-xl image-full">
             <figure>
-              <img height={100} src={hero1} alt="Album" />
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                alt="Shoes"
+              />
             </figure>
             <div className="card-body">
-              <h2 className="card-title">
-                Business Name{' '}
-                <div className="badge badge-primary">email@email.com</div>
-              </h2>
-              <p>The twenty character minimum requirement is dumb.</p>
-
+              <h2 className="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary m-3">
-                  <FaEye />
-                </button>
-                <button className="btn btn-secondary m-3">
-                  <FaPencil />
-                </button>
-                <button className="btn btn-error m-3">
-                  <FaX />
-                </button>
+                <button className="btn btn-primary">Buy Now</button>
               </div>
             </div>
           </div>
