@@ -2,7 +2,7 @@ import {FaX, FaEye, FaPencil } from 'react-icons/fa6'
 import hero1 from '../assets/hero1.jpeg'
 
 export async function loader({ params }) {
-    console.log(params.email);
+    console.log(params.email)
     const response = await fetch(
       `https://api.fasocard.com/business/list/${params.email}`,
       {
