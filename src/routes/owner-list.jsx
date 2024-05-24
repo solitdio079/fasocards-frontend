@@ -1,4 +1,4 @@
-import { FaEye, FaX, FaEdit  } from 'react-icons/fa'
+import {FaX, FaEye, FaEdit  } from 'react-icons/fa6'
 import hero1 from '../assets/hero1.jpeg'
 
 export default function OwnerList() {
