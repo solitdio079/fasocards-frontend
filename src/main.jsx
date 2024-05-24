@@ -7,7 +7,8 @@ import Login, {action as loginAction} from "./routes/login"
 import EmailSent from './routes/emailSent'
 import CreateBusiness, { action as businessAction } from './routes/create-business'
 import SingleBusiness, { loader as businessLoader } from './routes/single-business'
-import GetQRCode, {loader as qrLoader} from './routes/get-qrcode'
+import GetQRCode, { loader as qrLoader } from './routes/get-qrcode'
+import OwnerList from './routes/owner-list'
 import ErrorPage from './error-page'
 
 import './index.css'
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
             path: '/verify-email',
             element: <EmailSent />,
           },
+          {
+            path: "/list/:email",
+            element: <OwnerList/>
+          }
         ],
       },
     ],
