@@ -8,15 +8,25 @@ export default function OwnerList() {
           <div className="card w-96 bg-base-100 shadow-xl image-full">
             <figure>
               <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                src={hero1}
                 alt="Shoes"
               />
             </figure>
             <div className="card-body">
-              <h2 className="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <h2 className="card-title">
+                Shoes! <div className="badge badge-secondary">abc@abv.com</div>
+              </h2>
+              <p>The description is a mess without the 20 characters rule!</p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
+                <button className="btn btn-primary">
+                  <FaEye /> Voir
+                </button>
+                <button className="btn btn-warning">
+                  <FaPencil /> Modifier
+                </button>
+                <button className="btn btn-error">
+                  <FaX /> Supprimer
+                </button>
               </div>
             </div>
           </div>
