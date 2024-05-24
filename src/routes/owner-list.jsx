@@ -1,6 +1,26 @@
 import {FaX, FaEye, FaPencil } from 'react-icons/fa6'
 import hero1 from '../assets/hero1.jpeg'
 
+export async function loader({ params }) {
+    const response = await fetch(
+      `https://api.fasocard.com/business/list/${params.email}`,
+      {
+        method: 'GET',
+        mode: 'cors',
+        credentials: 'include',
+        headers: {
+          'Access-Control-Allow-Origin': 'https://api.fasocard.com',
+          'Access-Control-Allow-Credentials': 'true',
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+      }
+    )
+    const dataList = await response.json()
+    console.log(dataList)
+    return dataList
+}
+
 export default function OwnerList() {
     return (
       <>
