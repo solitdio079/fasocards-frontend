@@ -5,7 +5,7 @@ export default function OwnerList() {
     return (
       <>
         <div className="flex m-5 items-center justify-between flex-wrap">
-          <div className="card w-1/3 bg-base-100 shadow-xl image-full">
+          <div className="card w-full lg:w-1/3 bg-base-100 shadow-xl image-full">
             <figure>
               <img
                 src={hero1}
