@@ -21,7 +21,7 @@ export default function OwnerList() {
                   <FaEye />
                 </button>
                 <button className="btn btn-secondary m-3">
-                  <FaEdit />
+                  <FaPencil />
                 </button>
                 <button className="btn btn-error m-3">
                   <FaX />
