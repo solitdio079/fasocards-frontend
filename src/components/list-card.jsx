@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default function ListCard({ data }) {
   return (
     <>
-      <div className="card m-5 w-full lg:w-1/3 bg-base-100 shadow-xl image-full">
+      <div className="card m-5 w-full lg:w-1/4 bg-base-100 shadow-xl image-full">
         <figure>
           <img src={hero1} alt="Shoes" />
         </figure>
