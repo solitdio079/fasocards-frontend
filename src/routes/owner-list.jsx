@@ -6,7 +6,7 @@ export default function OwnerList() {
       <>
         <div className="flex-col">
           <div className="card lg:card-side bg-base-100 shadow-xl">
-            <figure className={max-h-100}>
+            <figure className="max-h-100">
               <img src={hero1} alt="Album" />
             </figure>
             <div className="card-body">
