@@ -142,7 +142,7 @@ export default function SingleBusiness() {
         ) : (
           <button
             className="btn btn-primary mx-auto"
-            onClick={(window.location = 'http://localhost:5173/')}
+            onClick={(window.location = 'https://fasocard.com/')}
           >
             Go Home
           </button>
