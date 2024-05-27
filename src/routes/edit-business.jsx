@@ -78,7 +78,7 @@ export default function EditBusiness() {
         Nom
         <input
           name="name"
-          value={data.name}
+          defaultValue={data.name}
           type="text"
           className="grow"
           placeholder="Daisy"
@@ -89,7 +89,7 @@ export default function EditBusiness() {
         Email
         <input
           name="email"
-          value={data.email}
+          defaultValue={data.email}
           type="text"
           className="grow"
           placeholder="daisy@site.com"
@@ -114,7 +114,7 @@ export default function EditBusiness() {
           type="text"
           className="grow"
           placeholder="www.votre-entreprise.com"
-          value={data.website}
+          defaultValue={data.website}
           name="website"
         />
       </label>
@@ -123,7 +123,7 @@ export default function EditBusiness() {
         <input
           type="text"
           className="grow"
-          value={data.facebookLink || ''}
+          defaultValue={data.facebookLink || ''}
           placeholder="www.facebook.com/example"
           name="facebookLink"
         />
@@ -134,7 +134,7 @@ export default function EditBusiness() {
         <input
           type="text"
           className="grow"
-          value={data.twitterLink || ''}
+          defaultValue={data.twitterLink || ''}
           placeholder="www.twitter.com/example"
           name="twitterLink"
         />
@@ -145,7 +145,7 @@ export default function EditBusiness() {
         <input
           type="text"
           className="grow"
-          value={data.tiktokLink || ''}
+          defaultValue={data.tiktokLink || ''}
           placeholder="www.tiktok.com/example"
           name="tiktokLink"
         />
@@ -156,7 +156,7 @@ export default function EditBusiness() {
         <input
           type="text"
           className="grow"
-          value={data.instagramLink || ''}
+          defaultValue={data.instagramLink || ''}
           placeholder="www.tiktok.com/example"
           name="instagramLink"
         />
@@ -166,7 +166,7 @@ export default function EditBusiness() {
         <input
           type="text"
           className="grow"
-          value={data.linkedinLink || ''}
+          defaultValue={data.linkedinLink || ''}
           placeholder="www.linkedin.com/example"
           name="linkedinLink"
         />
