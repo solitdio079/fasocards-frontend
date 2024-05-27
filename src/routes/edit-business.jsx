@@ -172,12 +172,12 @@ export default function EditBusiness() {
         />
       </label>
 
-      <button className="btn btn-primary m-3">
+      <button className="btn btn-warning m-3">
         {' '}
         {navigation.state === 'submitting' ? (
           <span className="loading loading-infinity loading-lg"></span>
         ) : (
-          'Enregistrer'
+          'Modifier'
         )}
       </button>
     </Form>
