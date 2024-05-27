@@ -21,7 +21,7 @@ export async function action({ params,request }) {
 
   try {
     const response = await fetch(`https://api.fasocard.com/business/update/${params.name}`, {
-      method: 'POST',
+      method: 'PUT',
       mode: 'cors',
       credentials: 'include',
       headers: {
@@ -72,7 +72,7 @@ export default function EditBusiness() {
   return (
     <Form method="post" className="m-5 p-5 flex flex-col justify-between ">
       <p className="text-center my-3 text-bold text-3xl">
-        Enregistrer votre Business
+        Modifier {data.name}
       </p>
       <label className="input input-bordered flex items-center gap-2 m-3">
         Nom
