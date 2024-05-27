@@ -23,7 +23,7 @@ export default function ListCard({ data }) {
             <Link to={`/edit/${data.name}`} className="btn btn-warning">
               <FaPencil /> Modifier
             </Link>
-                      <Form action={`/delete/${data._id}`}>
+                      <Form method='post' action={`/delete/${data._id}`}>
                           <input type="hidden" value={`/list/${data.owner}`} name="backUrl"/>
               <button className="btn btn-error">
                 <FaX /> Supprimer
