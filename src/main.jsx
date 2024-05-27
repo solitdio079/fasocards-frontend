@@ -9,7 +9,8 @@ import CreateBusiness, { action as businessAction } from './routes/create-busine
 import SingleBusiness, { loader as businessLoader } from './routes/single-business'
 import GetQRCode, { loader as qrLoader } from './routes/get-qrcode'
 import OwnerList, { loader as listLoader } from './routes/owner-list'
-import EditBusiness, {loader as editLoader, action as editAction} from './routes/edit-business'
+import EditBusiness, { loader as editLoader, action as editAction } from './routes/edit-business'
+import {action as deleteAction} from './routes/delete-business'
 import ErrorPage from './error-page'
 
 import './index.css'
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
           {
             path: '/qrcode/:name',
             element: <GetQRCode />,
-            loader: qrLoader
+            loader: qrLoader,
           },
 
           {
@@ -54,16 +55,21 @@ const router = createBrowserRouter([
             element: <EmailSent />,
           },
           {
-            path: "/list/:email",
+            path: '/list/:email',
             element: <OwnerList />,
-            loader: listLoader
+            loader: listLoader,
           },
           {
-            path: "/edit/:name",
+            path: '/edit/:name',
             element: <EditBusiness />,
             loader: editLoader,
-            action: editAction
-          }
+            action: editAction,
+          },
+          {
+            path: '/delete/:id',
+            action: deleteAction
+           
+          },
         ],
       },
     ],
