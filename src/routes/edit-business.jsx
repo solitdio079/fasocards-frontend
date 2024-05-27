@@ -32,7 +32,7 @@ export async function action({ params,request }) {
       body: JSON.stringify(bodyObject),
     })
     const newBusiness = await response.json()
-    return redirect(`/business/${newBusiness.name}`)
+    return redirect(`/business/${newBusiness.data.name}`)
   } catch (error) {
     throw new Error(error)
   }
