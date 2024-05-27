@@ -103,7 +103,7 @@ export default function EditBusiness() {
           placeholder="Une description de votre entreprise"
           required
         >
-          data.description
+          {data.description}
         </textarea>
       </label>
 
