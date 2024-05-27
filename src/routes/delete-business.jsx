@@ -19,8 +19,9 @@ export async function action({ params, request }) {
            }
          )
         const message = await response.json()
+        console.log(message)
         if(message.successMessage) return redirect(backUrl)
-        
+        return redirect('/')
     } catch (error) {
        throw new Error(error.message)
         
