@@ -57,7 +57,7 @@ export async function loader({ params }) {
          }
        )
        const business = await response.json()
-       return business
+       return business.data
      } catch (error) {
        throw new Error(error.message)
      }
@@ -66,7 +66,7 @@ export async function loader({ params }) {
 export default function EditBusiness() {
     const [user] = useOutletContext()
     const data = useLoaderData()
-    console.log(data)
+   
   console.log(user)
   const navigation = useNavigation()
   return (

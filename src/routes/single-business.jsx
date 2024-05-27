@@ -28,7 +28,7 @@ export async function loader({ params }) {
            }
          )
          const business = await response.json()
-         return business
+         return business.data
         
     } catch (error) {
         throw new Error(error.message)
@@ -38,8 +38,8 @@ export async function loader({ params }) {
 }
 
 export default function SingleBusiness() {
-    let business = useLoaderData()
-    business = business.data
+    const business = useLoaderData()
+    
    
     
     return (
