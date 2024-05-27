@@ -101,9 +101,10 @@ export default function EditBusiness() {
           name="description"
           className="grow"
           placeholder="Une description de votre entreprise"
-          value={data.description}
           required
-        ></textarea>
+        >
+          data.description
+        </textarea>
       </label>
 
       <label className="input input-bordered flex items-center gap-2 m-3">
