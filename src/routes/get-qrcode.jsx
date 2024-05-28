@@ -54,7 +54,7 @@ export default function GetQRCode() {
             <button
               onClick={() => {
                 navigator.clipboard.writeText(
-                  `https://fasocard.com//business/${name}`
+                  `https://fasocard.com/business/${name}`
                 )
                 setCopied(true)
                 
