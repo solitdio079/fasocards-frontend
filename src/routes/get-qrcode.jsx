@@ -48,21 +48,19 @@ export default function GetQRCode() {
               type="text"
               placeholder="Type here"
               className="input input-bordered w-full max-w-xs"
-              value={`https://fasocard.com/business/${name}`}
+              value={encodeURI(`https://fasocard.com/business/${name}`)}
               readOnly
             />
             <button
               onClick={() => {
                 navigator.clipboard.writeText(
-                  `https://fasocard.com/business/${name}`
+                  encodeURI(`https://fasocard.com/business/${name}`)
                 )
                 setCopied(true)
-                
               }}
-                        className={copied ? "btn btn-disabled": "btn btn-primary"}
-                        
+              className={copied ? 'btn btn-disabled' : 'btn btn-primary'}
             >
-             {copied ? <FaCheck/>:"Copier"}
+              {copied ? <FaCheck /> : 'Copier'}
             </button>
           </div>
         </div>
