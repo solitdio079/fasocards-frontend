@@ -5,6 +5,7 @@ export default {
   theme: {
     extend: {},
   },
+  plugins: [daisyui],
   daisyui: {
     themes: [
       {
@@ -20,6 +21,5 @@ export default {
       'cupcake',
     ],
   },
-  plugins: [daisyui],
 }
 
