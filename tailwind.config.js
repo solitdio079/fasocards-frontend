@@ -18,7 +18,6 @@ export default {
         },
       },
       'dark',
-      'cupcake',
     ],
   },
 }
