@@ -10,10 +10,10 @@ export default {
     themes: [
       {
         mytheme: {
-          primary: '#750404',
-          secondary: '#f5f2f3',
-          accent: '#ef84f5',
-          neutral: '#000000',
+          "primary": '#750404',
+          "secondary": '#f5f2f3',
+          "accent": '#ef84f5',
+          "neutral": '#000000',
           'base-100': '#ffffff',
         },
       },
