@@ -27,7 +27,7 @@ export async function loader() {
 
 export default function Stats() {
     const stats = useLoaderData()
-    const data = stats[0].data
+    const data = stats.data[0]
     return (
       <div className="flex items-center w-full">
         <div className="stats stats-vertical lg:stats-horizontal shadow mx-auto">
