@@ -96,7 +96,7 @@ export default function Root() {
                   </NavLink>
                 </li>
 
-                {user.isAdmin ? (
+                {user ? (
                   <li>
                     <NavLink
                       to="/admin"
