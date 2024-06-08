@@ -95,6 +95,26 @@ export default function Root() {
                     {user ? `Mes Business` : 'Se Connecter'}
                   </NavLink>
                 </li>
+
+                {user.isAdmin ? (
+                  <li>
+                    <NavLink
+                      to="/admin"
+                      className={({ isActive, isPending }) =>
+                        isActive
+                          ? 'bg-primary text-white'
+                          : isPending
+                          ? 'bg-neutral text-neutral-content'
+                          : ''
+                      }
+                    >
+                      Admin
+                    </NavLink>
+                  </li>
+                ) : (
+                  ''
+                )}
+
                 {user ? (
                   <li>
                     <NavLink

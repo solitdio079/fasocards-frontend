@@ -2,7 +2,6 @@ import { Outlet, NavLink, useOutletContext} from "react-router-dom"
 import { FaUserGroup , FaChartLine, FaGear } from "react-icons/fa6"
 export default function Admin() {
   const [user] = useOutletContext()
-
   console.log(user)
   if(!user || !user.isAdmin ) console.log("Not allowed here!")
     return (
