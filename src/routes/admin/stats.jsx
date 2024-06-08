@@ -27,25 +27,25 @@ export async function loader() {
 
 export default function Stats() {
     const stats = useLoaderData()
-    console.log(stats);
+    const data = stats[0].data
     return (
       <div className="flex items-center w-full">
         <div className="stats stats-vertical lg:stats-horizontal shadow mx-auto">
           <div className="stat place-items-center">
             <div className="stat-title">Business</div>
-            <div className="stat-value">31K</div>
-            <div className="stat-desc">From January 1st to February 1st</div>
+            <div className="stat-value">{data.totalBusiness} </div>
+            <div className="stat-desc">Since Creation</div>
           </div>
 
           <div className="stat place-items-center">
             <div className="stat-title">Utilisateur</div>
-            <div className="stat-value text-secondary">4,200</div>
+            <div className="stat-value text-secondary">{data.totalUsers} </div>
             <div className="stat-desc text-secondary">↗︎ 40 (2%)</div>
           </div>
 
           <div className="stat place-items-center">
             <div className="stat-title">Nouveau Utilisateurs</div>
-            <div className="stat-value">1,200</div>
+            <div className="stat-value">{data.newUsers}</div>
             <div className="stat-desc">↘︎ 90 (14%)</div>
           </div>
         </div>

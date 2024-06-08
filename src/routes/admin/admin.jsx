@@ -1,9 +1,9 @@
-import { Outlet, NavLink, useOutletContext} from "react-router-dom"
+import { Outlet, NavLink, useOutletContext, useNavigate} from "react-router-dom"
 import { FaUserGroup , FaChartLine, FaGear } from "react-icons/fa6"
 export default function Admin() {
   const [user] = useOutletContext()
-  console.log(user)
-  if(!user || !user.isAdmin ) console.log("Not allowed here!")
+  const navigate = useNavigate()
+  if(!user || !user.isAdmin ) navigate(-1)
     return (
       <>
         <div className="flex flex-col lg:flex-row justify-between m-5 p-5">
