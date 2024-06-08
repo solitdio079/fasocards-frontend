@@ -11,6 +11,7 @@ import GetQRCode, { loader as qrLoader } from './routes/get-qrcode'
 import OwnerList, { loader as listLoader } from './routes/owner-list'
 import EditBusiness, { loader as editLoader, action as editAction } from './routes/edit-business'
 import Admin from './routes/admin/admin'
+import Stats, {loader as statsLoader} from './routes/admin/stats'
 import {action as deleteAction} from './routes/delete-business'
 import ErrorPage from './error-page'
 
@@ -73,7 +74,14 @@ const router = createBrowserRouter([
           },
           {
             path: "/admin",
-            element: <Admin/>
+            element: <Admin />,
+            children: [{
+          
+                index: true,
+              element: <Stats />,
+                loader: statsLoader
+              
+            }]
           }
         ],
       },
