@@ -96,23 +96,6 @@ export default function Root() {
                   </NavLink>
                 </li>
 
-               
-                  <li>
-                    <NavLink
-                      to="/admin"
-                      className={({ isActive, isPending }) =>
-                        isActive
-                          ? 'bg-primary text-white'
-                          : isPending
-                          ? 'bg-neutral text-neutral-content'
-                          : ''
-                      }
-                    >
-                      Admin
-                    </NavLink>
-                  </li>
-               
-
                 {user ? (
                   <li>
                     <NavLink
@@ -131,6 +114,20 @@ export default function Root() {
                 ) : (
                   ''
                 )}
+                <li>
+                  <NavLink
+                    to="/admin"
+                    className={({ isActive, isPending }) =>
+                      isActive
+                        ? 'bg-primary text-white'
+                        : isPending
+                        ? 'bg-neutral text-neutral-content'
+                        : ''
+                    }
+                  >
+                    Admin
+                  </NavLink>
+                </li>
               </ul>
             </div>
             <NavLink
