@@ -71,8 +71,8 @@ export default  function CreateBusiness() {
 
         <label className="form-control w-full max-w-xs">
           <div className="label">
-            <span className="label-text">Pick a file</span>
-            <span className="label-text-alt">Alt label</span>
+            <span className="label-text">Photo</span>
+            <span className="label-text-alt">Logo du Business</span>
           </div>
           <input
             type="file"
