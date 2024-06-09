@@ -8,7 +8,7 @@ export async function action({ request }) {
     //const bodyObject = Object.fromEntries(body)
   
     try {
-        const response = await fetch('http://localhost:3000/business/', {
+        const response = await fetch('https://api.fasocard.com/business/', {
           method: 'POST',
           mode: 'cors',
           credentials: 'include',
