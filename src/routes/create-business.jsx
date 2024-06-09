@@ -5,7 +5,7 @@ import { FaLink, FaFacebook, FaTwitter, FaTiktok, FaInstagram, FaLinkedinIn } fr
 export async function action({ request }) {
     const body = await request.formData()
   
-    //const bodyObject = Object.fromEntries(body)
+    const bodyObject = Object.fromEntries(body)
   
     try {
         const response = await fetch('https://api.fasocard.com/business/', {
@@ -17,7 +17,7 @@ export async function action({ request }) {
             'Access-Control-Allow-Credentials': 'true',
             'Content-Type': 'application/json',
           },
-          body: body,
+          body: JSON.stringify(bodyObject),
         })
         const newBusiness = await response.json()
         console.log(newBusiness);
