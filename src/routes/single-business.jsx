@@ -7,7 +7,6 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from 'react-icons/fa6'
-import hero1 from '../assets/hero1.jpeg'
 //import hero2 from '../assets/hero2.jpeg'
 
 
@@ -48,18 +47,23 @@ export default function SingleBusiness() {
           <div className="lg:flex-col flex-row items-center w-full p-10">
             <div className="avatar">
               <div className="w-24 rounded">
-                <img src={hero1} />
+                <img src={`https://api.fasocard.com/uploads/businesses/${business.profilePhoto}`} />
               </div>
             </div>
             <div className="text-start">
               <h1 className=" text-2xl font-bold">
                 {' '}
                 {business.name}{' '}
-                <div className="badge badge-primary"><a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={`mailto: ${business.email}`}
-                > {business.email} </a></div>{' '}
+                <div className="badge badge-primary">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={`mailto: ${business.email}`}
+                  >
+                    {' '}
+                    {business.email}{' '}
+                  </a>
+                </div>{' '}
               </h1>
               <p className="text-sm"> {business.description} </p>
             </div>
@@ -136,8 +140,10 @@ export default function SingleBusiness() {
                   <FaLinkedinIn className="text-3xl text-blue-600" />
                 </a>
               </button>
-                    </div>
-                    <Link to={`/qrcode/${business.name}`} className="btn btn-primary">Get QR Code</Link>
+            </div>
+            <Link to={`/qrcode/${business.name}`} className="btn btn-primary">
+              Get QR Code
+            </Link>
           </div>
         ) : (
           <button
