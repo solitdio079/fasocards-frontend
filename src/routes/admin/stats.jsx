@@ -33,14 +33,14 @@ export default function Stats() {
         <div className="stats stats-vertical lg:stats-horizontal shadow mx-auto">
           <div className="stat place-items-center">
             <div className="stat-title">Business</div>
-            <div className="stat-value">{data.totalBusiness} </div>
+            <div className="stat-value">{data.totalBusiness}</div>
             <div className="stat-desc">Since Creation</div>
           </div>
 
           <div className="stat place-items-center">
-            <div className="stat-title">Utilisateur</div>
-            <div className="stat-value text-secondary">{data.totalUsers} </div>
-            <div className="stat-desc text-secondary">↗︎ 40 (2%)</div>
+            <div className="stat-title">Utilisateurs</div>
+            <div className="stat-value text-primary">{data.totalUsers}</div>
+            <div className="stat-desc text-primary">↗︎ 40 (2%)</div>
           </div>
 
           <div className="stat place-items-center">
