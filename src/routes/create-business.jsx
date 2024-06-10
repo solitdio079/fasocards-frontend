@@ -8,7 +8,7 @@ export async function action({ request }) {
     //const bodyObject = Object.fromEntries(body)
   
     try {
-        const response = await fetch('https://api.fasocard.com/business', {
+        const response = await fetch('https://api.fasocard.com/business/', {
           method: 'POST',
           mode: 'cors',
           credentials: 'include',
@@ -24,7 +24,7 @@ export async function action({ request }) {
         if (!newBusiness.name) throw new Error(newBusiness[0].msg)
         return redirect(`/business/${newBusiness.name}`)
     } catch (error) {
-        throw new Error(error)
+        throw new Error(error.message)
     }
 
     
