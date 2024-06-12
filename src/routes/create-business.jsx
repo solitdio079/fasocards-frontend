@@ -18,11 +18,11 @@ export async function action({ request }) {
           },
           body: body,
         })
-        const newBusiness = await response.text()
-        console.log(newBusiness);
-        return newBusiness
-       /* if (!newBusiness.name) throw new Error(newBusiness[0].msg)
-        return redirect(`/business/${newBusiness.name}`)*/
+        const newBusiness = await response.json()
+        //console.log(newBusiness);
+     
+       if (!newBusiness.name) throw new Error(newBusiness[0].msg)
+        return redirect(`/business/${newBusiness.name}`)
     } catch (error) {
       console.log(error.message)
       return
