@@ -24,7 +24,8 @@ export async function action({ request }) {
        /* if (!newBusiness.name) throw new Error(newBusiness[0].msg)
         return redirect(`/business/${newBusiness.name}`)*/
     } catch (error) {
-        throw new Error(error.message)
+      console.log(error.message)
+      return
     }
 
     
