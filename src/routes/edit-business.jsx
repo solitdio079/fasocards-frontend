@@ -73,7 +73,7 @@ export default function EditBusiness() {
   console.log(user)
   const navigation = useNavigation()
   return (
-    <Form method="post" className="m-5 p-5 flex flex-col justify-between ">
+    <Form encType='multipart/form-data' method="post" className="m-5 p-5 flex flex-col justify-between ">
       <p className="text-center my-3 text-bold text-3xl">
         Modifier {data.name}
       </p>
