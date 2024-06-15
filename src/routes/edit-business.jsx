@@ -17,10 +17,15 @@ import {
 export async function action({ params,request }) {
   const body = await request.formData()
 
-  const bodyObject = Object.fromEntries(body)
+  //const bodyObject = Object.fromEntries(body)
+  const bodyFile = body.get("profilePhoto")
+  console.log(bodyFile);
+  return bodyFile /*
+
+  const url = `https://api.fasocard.com/business/update/${params.name}`
 
   try {
-    const response = await fetch(`https://api.fasocard.com/business/update/${params.name}`, {
+    const response = await fetch(url, {
       method: 'PUT',
       mode: 'cors',
       credentials: 'include',
@@ -29,13 +34,13 @@ export async function action({ params,request }) {
         'Access-Control-Allow-Credentials': 'true',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(bodyObject),
+      body: body,
     })
     const newBusiness = await response.json()
     return redirect(`/business/${newBusiness.data.name}`)
   } catch (error) {
     throw new Error(error)
-  }
+  }*/
 }
 
 export async function loader({ params }) {
@@ -94,6 +99,17 @@ export default function EditBusiness() {
           required
         />
       </label>
+      <label className="input input-bordered flex items-center gap-2 m-3">
+        Telephone
+        <input
+          name="phone"
+          defaultValue={data.phone || ''}
+          type="text"
+          className="grow"
+          placeholder="+223 70 00 00 00"
+          required
+        />
+      </label>
       <label className="textarea textarea-bordered textarea-lg flex items-center gap-2 m-3">
         Description
         <textarea
@@ -104,6 +120,40 @@ export default function EditBusiness() {
         >
           {data.description}
         </textarea>
+      </label>
+      <label className="form-control w-full max-w-xs">
+        <div className="label">
+          <span className="label-text">Photo</span>
+          <span className="label-text-alt">Logo du Business</span>
+        </div>
+        <input
+          type="file"
+          className="file-input file-input-bordered w-full max-w-xs"
+          name="profilePhoto"
+          required
+        />
+      </label>
+
+      <label className="textarea textarea-bordered textarea-lg flex items-center gap-2 m-3">
+        Adresse du businesss
+        <textarea
+          name="address"
+          defaultValue={data.address}
+          className="grow"
+          placeholder="kuzeykent mah, mutlu sok, No14 d175 Kastamonu/Turkey"
+          required
+        ></textarea>
+      </label>
+      <label className="input input-bordered flex items-center gap-2 m-3">
+        Pays
+        <input
+          defaultValue={data.country}
+          name="country"
+          type="text"
+          className="grow"
+          placeholder="Mali"
+          required
+        />
       </label>
 
       <label className="input input-bordered flex items-center gap-2 m-3">
