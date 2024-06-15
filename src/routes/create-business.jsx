@@ -40,7 +40,11 @@ export default  function CreateBusiness() {
     console.log(user);
     const navigation = useNavigation()
     return (
-      <Form method="post" encType="multipart/form-data" className="m-5 p-5 flex flex-col justify-between ">
+      <Form
+        method="post"
+        encType="multipart/form-data"
+        className="m-5 p-5 flex flex-col justify-between "
+      >
         <p className="text-center my-3 text-bold text-3xl">
           Enregistrer votre Business
         </p>
@@ -61,6 +65,16 @@ export default  function CreateBusiness() {
             type="text"
             className="grow"
             placeholder="daisy@site.com"
+            required
+          />
+        </label>
+        <label className="input input-bordered flex items-center gap-2 m-3">
+          Telephone
+          <input
+            name="phone"
+            type="text"
+            className="grow"
+            placeholder="+223 70 00 00 00"
             required
           />
         </label>
