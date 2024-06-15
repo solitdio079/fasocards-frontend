@@ -30,7 +30,7 @@ export default function Users() {
     const users = useLoaderData()
     console.log(users)
     return (
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col flex-wrap lg:flex-row">
         {users.map(user => <UserCard key={user._id} user={user} />)}
       </div>
     )

@@ -3,7 +3,7 @@ import {Form} from 'react-router-dom'
 
 export default function UserCard({user}) {
     return (
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-96 bg-base-100 shadow-xl m-2">
         <div className="card-body">
           <h2 className="card-title"> {user.email} </h2>
           <p className="badge badge-primary"> {user.admin ? 'Admin': 'Client'} </p>
