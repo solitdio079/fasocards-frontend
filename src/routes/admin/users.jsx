@@ -1,9 +1,8 @@
-import { useLoaderData, Form, useFetcher } from 'react-router-dom'
-//import UserCard from '../../components/user-card'
+import { useLoaderData } from 'react-router-dom'
+import UserCard from '../../components/user-card'
 
 
 export async function action({ request }) {
-    console.log("Inside fetcher action");
     const fetcherBody = await request.formData()
     const fetcherObj = new Object.fromEntries(fetcherBody)
 
@@ -59,32 +58,10 @@ export async function loader() {
 
 export default function Users() {
     const users = useLoaderData()
-    const fetcher = useFetcher()
     console.log(users)
     return (
       <div className="flex flex-col flex-wrap lg:flex-row">
-        {users.map((user) => (
-          <div key={user._id} className="card w-96 bg-base-100 shadow-xl m-2">
-            <div className="card-body">
-              <h2 className="card-title"> {user.email} </h2>
-              <p className="badge badge-primary">
-                {' '}
-                {user.admin ? 'Admin' : 'Client'}{' '}
-              </p>
-              <div className="card-actions justify-end">
-                <fetcher.Form method="post">
-                  <input type="hidden" name="id" value={user._id} />
-                  <input
-                    name="isAllowed"
-                    type="checkbox"
-                    defaultChecked={user.isAllowed}
-                    className="checkbox checkbox-md checkbox-info"
-                  />
-                </fetcher.Form>
-              </div>
-            </div>
-          </div>
-        ))}
+        {users.map(user => <UserCard key={user._id} user={user} />)}
       </div>
     )
 }

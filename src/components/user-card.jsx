@@ -13,7 +13,8 @@ export default function UserCard({ user }) {
                         <input type="hidden" name="id" value={user._id} /> 
                         <input
                             name="isAllowed"
-                type="checkbox"
+                            type="checkbox"
+                            onChange={fetcher.submit()}
                 defaultChecked = {user.isAllowed}
                 className="checkbox checkbox-md checkbox-info"
               />
