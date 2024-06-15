@@ -92,9 +92,9 @@ export default function EditBusiness() {
       <p className="text-center my-3 text-bold text-3xl">
         <div className="avatar">
           <div className="w-24 rounded">
-            <img src={data.profileName || hero1 } alt="logo" />
+            <img src={data.profilePhoto || hero1 } alt="logo" />
           </div>
-        </div>
+        </div><br/>
         Modifier {data.name}
       </p>
 
