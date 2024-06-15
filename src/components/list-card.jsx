@@ -7,7 +7,13 @@ export default function ListCard({ data }) {
     <>
       <div className="card m-3 w-full lg:w-1/4 bg-base-100 shadow-xl image-full">
         <figure>
-          <img src={data.profilePhoto || hero1} alt="Shoes" />
+          <img
+            src={
+              `https://api.fasocard.com/static/businesses/${data.profilePhoto}` ||
+              hero1
+            }
+            alt="Shoes"
+          />
         </figure>
         <div className="card-body">
           <h2 className="card-title">
@@ -23,8 +29,12 @@ export default function ListCard({ data }) {
             <Link to={`/edit/${data.name}`} className="btn btn-warning">
               <FaPencil /> Modifier
             </Link>
-                      <Form method='post' action={`/delete/${data._id}`}>
-                          <input type="hidden" value={`/list/${data.owner}`} name="backUrl"/>
+            <Form method="post" action={`/delete/${data._id}`}>
+              <input
+                type="hidden"
+                value={`/list/${data.owner}`}
+                name="backUrl"
+              />
               <button className="btn btn-error">
                 <FaX /> Supprimer
               </button>
