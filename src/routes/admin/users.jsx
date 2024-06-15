@@ -1,4 +1,5 @@
-import { Form, useLoaderData } from 'react-router-dom'
+import { useLoaderData } from 'react-router-dom'
+import UserCard from '../../components/user-card'
 
 
 export async function loader() {
@@ -15,7 +16,7 @@ export async function loader() {
          })
         const users = await response.json()
         //console.log(users)
-        return users
+        return users.data
         
     } catch (error) {
         console.log(error.message)
@@ -30,22 +31,7 @@ export default function Users() {
     console.log(users)
     return (
       <div className="flex flex-col lg:flex-row">
-        <div className="card w-96 bg-base-100 shadow-xl">
-        
-          <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-              <Form method="post">
-                <input
-                  type="checkbox"
-                  defaultChecked
-                  className="checkbox checkbox-md checkbox-info"
-                />
-              </Form>
-            </div>
-          </div>
-        </div>
+        {users.map(user => <UserCard key={user._id} user={user} />)}
       </div>
     )
 }
