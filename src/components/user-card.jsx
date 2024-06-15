@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import {Form, useFetcher} from 'react-router-dom'
+import {useFetcher} from 'react-router-dom'
 
 export default function UserCard({ user }) {
     const fetcher = useFetcher()
