@@ -13,7 +13,7 @@ export async function loader() {
              'Content-Type': 'application/json',
            },
          })
-        const users = await response.json()
+        const users = await response.text()
         console.log(users)
         return users
         
