@@ -4,7 +4,7 @@ import UserCard from '../../components/user-card'
 
 export async function action({ request }) {
     const fetcherBody = await request.formData()
-    const fetcherObj = new Object.fromEntries(fetcherBody)
+    const fetcherObj = Object.fromEntries(fetcherBody)
 
     const url = `https://api.fasocard.com/admin/users/patch/${fetcherObj.id}`
     try {
