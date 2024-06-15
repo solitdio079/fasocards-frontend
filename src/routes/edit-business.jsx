@@ -45,6 +45,7 @@ export async function action({ params,request }) {
       body: body,
     })
     const newBusiness = await response.json()
+    console.log(newBusiness)
     return redirect(`/business/${newBusiness.data.name}`)
   } catch (error) {
     throw new Error(error)
