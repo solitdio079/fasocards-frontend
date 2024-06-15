@@ -49,7 +49,7 @@ export default function SingleBusiness() {
           <div className="lg:flex-col flex-row items-center w-full p-10">
             <div className="avatar">
               <div className="w-24 rounded">
-                <img src={`https://api.fasocard.com/static/businesses/${business.profilePhoto}` || hero2} />
+                <img src={business.profilePhoto || hero2} />
               </div>
             </div>
             <div className="text-start">

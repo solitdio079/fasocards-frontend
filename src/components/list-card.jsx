@@ -9,7 +9,7 @@ export default function ListCard({ data }) {
         <figure>
           <img
             src={
-              `https://api.fasocard.com/static/businesses/${data.profilePhoto}` ||
+            data.profilePhoto ||
               hero1
             }
             alt="Shoes"
