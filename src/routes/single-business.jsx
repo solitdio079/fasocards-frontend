@@ -6,6 +6,8 @@ import {
   FaTiktok,
   FaInstagram,
   FaLinkedinIn,
+  FaPhone,
+  FaLocationPin
 } from 'react-icons/fa6'
 import hero2 from '../assets/hero2.jpeg'
 
@@ -65,6 +67,8 @@ export default function SingleBusiness() {
                   </a>
                 </div>{' '}
               </h1>
+              <p className="text-sm badge badge-accent"><FaPhone/>{` ${business.phone}`}</p>
+              <p className="text-sm badge badge-accent"><FaLocationPin/>{` ${business.address + ' Pays:' + business.country}`}</p>
               <p className="text-sm"> {business.description} </p>
             </div>
             <div className="flex-row items-start">

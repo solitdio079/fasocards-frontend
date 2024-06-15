@@ -7,7 +7,7 @@ export default function ListCard({ data }) {
     <>
       <div className="card m-3 w-full lg:w-1/4 bg-base-100 shadow-xl image-full">
         <figure>
-          <img src={hero1} alt="Shoes" />
+          <img src={data.profilePhoto||hero1} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">
