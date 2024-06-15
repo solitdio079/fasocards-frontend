@@ -2,6 +2,36 @@ import { useLoaderData } from 'react-router-dom'
 import UserCard from '../../components/user-card'
 
 
+export async function action({ request }) {
+    const fetcherBody = await request.formData()
+    const fetcherObj = new Object.fromEntries(fetcherBody)
+
+    const url = `https://api.fasocard.com/admin/users/patch/${fetcherObj.id}`
+    try {
+        const response = await fetch(url, {
+          method:"PATCH",
+          mode: 'cors',
+          credentials: 'include',
+          headers: {
+            'Access-Control-Allow-Origin': 'https://api.fasocard.com',
+            'Access-Control-Allow-Credentials': 'true',
+            },
+          body: JSON.stringify(fetcherObj)
+        })
+
+        const updated = await response.json()
+        console.log(updated)
+        return updated
+        
+    } catch (error) {
+        console.log(error.message);
+        return error.message
+    }
+
+
+   
+}
+
 export async function loader() {
     try {
          const response = await fetch('https://api.fasocard.com/admin/users', {
