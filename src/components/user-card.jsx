@@ -11,13 +11,14 @@ export default function UserCard({ user }) {
           <div className="card-actions justify-end">
                     <fetcher.Form method="post">
                         <input type="hidden" name="id" value={user._id} /> 
+                        <button type="submit">
                         <input
                             name="isAllowed"
                             type="checkbox"
                           
                 defaultChecked = {user.isAllowed}
                 className="checkbox checkbox-md checkbox-info"
-              />
+              /></button>
             </fetcher.Form>
           </div>
         </div>
