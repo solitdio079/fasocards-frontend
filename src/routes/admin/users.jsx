@@ -4,7 +4,7 @@ import { Form, useLoaderData } from 'react-router-dom'
 export async function loader() {
     try {
          const response = await fetch('https://api.fasocard.com/admin/users', {
-           method: 'POST',
+           method: 'GET',
            mode: 'cors',
            credentials: 'include',
            headers: {
