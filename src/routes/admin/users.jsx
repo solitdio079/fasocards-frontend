@@ -3,6 +3,7 @@ import { useLoaderData, Form, useFetcher } from 'react-router-dom'
 
 
 export async function action({ request }) {
+    console.log("Inside fetcher action");
     const fetcherBody = await request.formData()
     const fetcherObj = new Object.fromEntries(fetcherBody)
 
