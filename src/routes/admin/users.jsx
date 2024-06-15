@@ -3,6 +3,7 @@ import UserCard from '../../components/user-card'
 
 
 export async function action({ request }) {
+    console.log("Inside action");
     const fetcherBody = await request.formData()
     const fetcherObj = Object.fromEntries(fetcherBody)
 
