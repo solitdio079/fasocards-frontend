@@ -19,10 +19,14 @@ export async function action({ params,request }) {
 
   //const bodyObject = Object.fromEntries(body)
   const bodyFile = body.get("profilePhoto")
-  console.log(bodyFile);
-  return bodyFile /*
+  
+  
+  
 
-  const url = `https://api.fasocard.com/business/update/${params.name}`
+  const url =
+    bodyFile.name === ''
+      ? `https://api.fasocard.com/business/patch/${params.name}`
+      : `https://api.fasocard.com/business/update/${params.name}`
 
   try {
     const response = await fetch(url, {
@@ -37,10 +41,11 @@ export async function action({ params,request }) {
       body: body,
     })
     const newBusiness = await response.json()
+    console.log(newBusiness);
     return redirect(`/business/${newBusiness.data.name}`)
   } catch (error) {
     throw new Error(error)
-  }*/
+  }
 }
 
 export async function loader({ params }) {
