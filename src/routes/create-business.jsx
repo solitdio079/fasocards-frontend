@@ -18,12 +18,10 @@ export async function action({ request }) {
           },
           body: body,
         })
-        const newBusiness = await response.text()
-      console.log(newBusiness)
-      return newBusiness
+        const newBusiness = await response.json()
      
       if (!newBusiness.name) {
-          return newBusiness
+          return redirect(`/?msg=notcreated`)
        }
       
       return redirect(`/business/${newBusiness.name}`)
