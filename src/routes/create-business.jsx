@@ -18,11 +18,11 @@ export async function action({ request }) {
           },
           body: body,
         })
-        const newBusiness = await response.json()
-        console.log(newBusiness);
+        const newBusiness = await response.text()
+      console.log(newBusiness)
+      return 
      
       if (!newBusiness.name) {
-        
           return newBusiness
        }
       
