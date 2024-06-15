@@ -40,9 +40,10 @@ export async function action({ params,request }) {
       },
       body: body,
     })
-    const newBusiness = await response.json()
+    const newBusiness = await response.text()
     console.log(newBusiness);
-    return redirect(`/business/${newBusiness.data.name}`)
+    return newBusiness
+    //return redirect(`/business/${newBusiness.data.name}`)
   } catch (error) {
     throw new Error(error)
   }
