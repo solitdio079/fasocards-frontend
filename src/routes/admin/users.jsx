@@ -1,6 +1,32 @@
-import {Form} from 'react-router-dom'
+import { Form, useLoaderData } from 'react-router-dom'
+
+
+export async function loader() {
+    try {
+         const response = await fetch('https://api.fasocard.com/admin/users', {
+           method: 'POST',
+           mode: 'cors',
+           credentials: 'include',
+           headers: {
+             'Access-Control-Allow-Origin': 'https://api.fasocard.com',
+             'Access-Control-Allow-Credentials': 'true',
+             'Content-Type': 'application/json',
+           },
+         })
+        const users = await response.json()
+        console.log(users)
+        return users
+        
+    } catch (error) {
+        console.log(error.message)
+    }
+   
+    
+}
 
 export default function Users() {
+    const users = useLoaderData()
+    console.log(users)
     return (
       <div className="flex flex-col lg:flex-row">
         <div className="card w-96 bg-base-100 shadow-xl">
@@ -19,7 +45,7 @@ export default function Users() {
                 <input
                   type="checkbox"
                   defaultChecked
-                  className="checkbox checkbox-lg checkbox-info"
+                  className="checkbox checkbox-md checkbox-info"
                 />
               </Form>
             </div>
