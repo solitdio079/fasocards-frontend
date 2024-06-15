@@ -13,6 +13,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from 'react-icons/fa6'
+import hero1 from '../assets/hero1.jpeg'
 
 export async function action({ params,request }) {
   const body = await request.formData()
@@ -27,10 +28,14 @@ export async function action({ params,request }) {
     bodyFile.name === ''
       ? `https://api.fasocard.com/business/patch/${params.name}`
       : `https://api.fasocard.com/business/update/${params.name}`
+  const fetchMethod =
+    bodyFile.name === ''
+      ? `PATCH`
+      : `PUT`
 
   try {
     const response = await fetch(url, {
-      method: 'PUT',
+      method: fetchMethod,
       mode: 'cors',
       credentials: 'include',
       headers: {
@@ -79,10 +84,20 @@ export default function EditBusiness() {
   console.log(user)
   const navigation = useNavigation()
   return (
-    <Form encType='multipart/form-data' method="post" className="m-5 p-5 flex flex-col justify-between ">
+    <Form
+      encType="multipart/form-data"
+      method="post"
+      className="m-5 p-5 flex flex-col justify-between "
+    >
       <p className="text-center my-3 text-bold text-3xl">
+        <div className="avatar">
+          <div className="w-24 rounded">
+            <img src={data.profileName || hero1 } alt="logo" />
+          </div>
+        </div>
         Modifier {data.name}
       </p>
+
       <label className="input input-bordered flex items-center gap-2 m-3">
         Nom
         <input
@@ -136,7 +151,6 @@ export default function EditBusiness() {
           type="file"
           className="file-input file-input-bordered w-full max-w-xs"
           name="profilePhoto"
-          
         />
       </label>
 
