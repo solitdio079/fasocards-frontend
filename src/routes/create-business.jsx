@@ -22,11 +22,14 @@ export async function action({ request }) {
         //console.log(newBusiness);
      
        if (!newBusiness.name) throw new Error(newBusiness[0].msg)
-        return redirect(`/business/${newBusiness.name}`)
+      
+      return redirect(`/business/${newBusiness.name}`)
+      
     } catch (error) {
       console.log(error.message)
-      return
+      return error.message
     }
+
 
     
 }
