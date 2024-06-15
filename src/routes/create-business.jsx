@@ -19,9 +19,12 @@ export async function action({ request }) {
           body: body,
         })
         const newBusiness = await response.json()
-        //console.log(newBusiness);
+        console.log(newBusiness);
      
-       if (!newBusiness.name) throw new Error(newBusiness[0].msg)
+      if (!newBusiness.name) {
+        
+          return newBusiness
+       }
       
       return redirect(`/business/${newBusiness.name}`)
       
