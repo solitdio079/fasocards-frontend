@@ -63,7 +63,7 @@ export default function Users() {
   return (
     <>
       <div className="flex flex-col lg:flex-row">
-        <Form>
+        <Form className="flex flex-col lg:flex-row">
           <label className="input input-bordered flex items-center gap-2">
             <input type="text" className="grow" placeholder="Search" />
 
