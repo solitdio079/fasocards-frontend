@@ -20,7 +20,7 @@ export default function UserCard({ user }) {
                   name="isAllowed"
                   type="checkbox"
                   defaultChecked={user.isAllowed}
-                  className="checkbox checkbox-md checkbox-info"
+                  className="checkbox checkbox-md checkbox-info m-1"
                         />
                         <button type="submit" className='btn btn-primary btn-xs m-1'>Switch</button>
               
