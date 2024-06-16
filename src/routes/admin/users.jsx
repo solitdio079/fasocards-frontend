@@ -66,6 +66,7 @@ export default function Users() {
         <Form>
           <label className="input input-bordered flex items-center gap-2">
             <input type="text" className="grow" placeholder="Search" />
+            <button className="btn btn-primary">Primary</button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
