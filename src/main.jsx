@@ -89,7 +89,7 @@ const router = createBrowserRouter([
                 action: adminUsersAction
               },
               {
-                path: '/admin/users/filter/:',
+                path: '/admin/users/filter/:search',
                 element: <UserFilter/>
               }
             ],
