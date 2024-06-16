@@ -80,7 +80,7 @@ export default function Users() {
               />
             </svg>
           </label>
-          <button className="btn btn-primary">Primary</button>
+          <button className="btn btn-primary btn-md mx-2">Submit</button>
         </Form>
       </div>
       <div className="flex flex-col flex-wrap lg:flex-row">
