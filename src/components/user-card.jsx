@@ -22,7 +22,7 @@ export default function UserCard({ user }) {
                   defaultChecked={user.isAllowed}
                   className="checkbox checkbox-md checkbox-info"
                         />
-                        <button type="submit" className='btn btn-primary'>Switch</button>
+                        <button type="submit" className='btn btn-primary btn-sm m-1'>Switch</button>
               
             </fetcher.Form>
           </div>
