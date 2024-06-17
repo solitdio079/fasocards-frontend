@@ -1,4 +1,4 @@
-import { useLoaderData, Form } from 'react-router-dom'
+import { useLoaderData, Form, useNavigation } from 'react-router-dom'
 import UserCard from '../../components/user-card'
 
 
@@ -34,6 +34,7 @@ export async function action({ request }) {
 }
 
 export async function loader() {
+
     try {
          const response = await fetch('https://api.fasocard.com/admin/users', {
            method: 'GET',
@@ -58,12 +59,17 @@ export async function loader() {
 }
 
 export default function Users() {
-    const users = useLoaderData()
+  const users = useLoaderData()
+  const navigation = useNavigation()
     console.log(users)
   return (
     <>
       <div className="flex flex-col lg:flex-row">
-        <Form action="/users/filter" role="search" className="flex flex-col lg:flex-row">
+        <Form
+          action="/admin/users/filter"
+          role="search"
+          className="flex flex-col lg:flex-row"
+        >
           <label className="input input-bordered flex items-center gap-2">
             <input type="text" className="grow" name="q" placeholder="Search" />
             <svg
@@ -79,7 +85,14 @@ export default function Users() {
               />
             </svg>
           </label>
-          <button className="btn btn-primary btn-md mx-2">Submit</button>
+          <button className="btn btn-primary btn-md mx-2">
+            {' '}
+            {navigation.statte === 'idle' ? (
+              'Submit'
+            ) : (
+              <span className="loading loading-infinity loading-sm"></span>
+            )}{' '}
+          </button>
         </Form>
       </div>
       <div className="flex flex-col flex-wrap lg:flex-row">
