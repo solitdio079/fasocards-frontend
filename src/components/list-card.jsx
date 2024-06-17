@@ -17,7 +17,7 @@ export default function ListCard({ data }) {
         </figure>
         <div className="card-body">
           <h2 className="card-title">
-            {data.name}{' '}
+            {data.name}{' '} <span className='badge badge-primary'> {data.country || ''} </span>
             <div className="badge badge-secondary"> {data.email} </div>
           </h2>
           <p> {data.description} </p>

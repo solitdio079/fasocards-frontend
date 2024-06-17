@@ -48,7 +48,7 @@ export default function Admin() {
             </li>
             <li>
               <NavLink
-                to="/admin/profile"
+                to="/admin/businessList"
                 className={({ isActive, isPending }) =>
                   isActive
                     ? 'bg-primary text-white'
@@ -58,7 +58,7 @@ export default function Admin() {
                 }
               >
                 <FaGear className="h-5 w-5" />
-                Profile
+                Businesses
                 <span className="badge badge-xs badge-info"></span>
               </NavLink>
             </li>
