@@ -68,7 +68,7 @@ export default function Users() {
         <Form
           action="/admin/users/filter"
           role="search"
-          className="flex flex-col lg:flex-row"
+          className="flex m-2 flex-col lg:flex-row"
         >
           <label className="input input-bordered flex items-center gap-2">
             <input type="text" className="grow" name="q" placeholder="Search" />

@@ -40,7 +40,7 @@ export default function BusinessList() {
         <Form
           action="/admin/business/filter"
           role="search"
-          className="flex flex-col lg:flex-row"
+          className="flex flex-col m-2 lg:flex-row"
         >
           <label className="input input-bordered flex items-center gap-2">
             <input type="text" className="grow" name="q" placeholder="Search" />
