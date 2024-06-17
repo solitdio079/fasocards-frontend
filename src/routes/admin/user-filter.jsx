@@ -17,7 +17,7 @@ export async function loader({ request }) {
             },
           }
         )
-        const users = await response.json()
+        const users = await response.text()
         console.log(users);
         //if (users.data) return users.data
         return [] 
