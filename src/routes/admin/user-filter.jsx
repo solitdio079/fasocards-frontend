@@ -18,7 +18,8 @@ export async function loader({ request }) {
           }
         )
         const users = await response.json()
-        if (users.data) return users.data
+        console.log(users);
+        //if (users.data) return users.data
         return [] 
         
     } catch (error) {
