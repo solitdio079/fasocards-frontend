@@ -6,7 +6,7 @@ export async function loader({ request }) {
     const q = url.searchParams.get("q")
     try {
         const response = await fetch(
-          `https:/api.fasocard.com/admin/users/filter/${q}`,
+          `https://api.fasocard.com/admin/users/filter/${q}`,
           {
             method: 'GET',
             mode: 'cors',
