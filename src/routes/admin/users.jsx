@@ -63,10 +63,9 @@ export default function Users() {
   return (
     <>
       <div className="flex flex-col lg:flex-row">
-        <Form method='post' action="/users/filter" className="flex flex-col lg:flex-row">
+        <Form action="/users/filter" role="search" className="flex flex-col lg:flex-row">
           <label className="input input-bordered flex items-center gap-2">
-            <input type="text" className="grow" placeholder="Search" />
-
+            <input type="text" className="grow" name="q" placeholder="Search" />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
