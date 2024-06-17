@@ -35,7 +35,7 @@ export default function BusinessFilter() {
       <>
         {navigation.state !== 'idle' ? (
           <span className="loading loading-infinity loading-lg"></span>
-        ) : data.length ? (
+        ) : data.length === 0 ? (
           'Pas de business'
         ) : (
           data.map((item) => <ListCard key={item._id} data={item} />)
