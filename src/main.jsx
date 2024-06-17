@@ -14,7 +14,7 @@ import Admin from './routes/admin/admin'
 import Users, { loader as adminUsersLoader, action as adminUsersAction } from './routes/admin/users'
 import UserFilter, { action as filterAction, loader as filterLoader } from './routes/admin/user-filter'
 import BusinessList, { loader as businessListLoader } from './routes/admin/business-list'
-import BusinessFilter from './routes/admin/business-filter'
+import BusinessFilter, {loader as businessFilterLoader} from './routes/admin/business-filter'
 import Stats, {loader as statsLoader} from './routes/admin/stats'
 import {action as deleteAction} from './routes/delete-business'
 import ErrorPage from './error-page'
@@ -103,7 +103,8 @@ const router = createBrowserRouter([
               },
               {
                 path: '/admin/business/filter',
-                element: <BusinessFilter/>
+                element: <BusinessFilter />,
+                loader: businessFilterLoader
               },
             ],
           },
