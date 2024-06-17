@@ -87,7 +87,7 @@ export default function Users() {
           </label>
           <button className="btn btn-primary btn-md mx-2">
             {' '}
-            {navigation.statte === 'idle' ? (
+            {navigation.state === 'idle' ? (
               'Submit'
             ) : (
               <span className="loading loading-infinity loading-sm"></span>
