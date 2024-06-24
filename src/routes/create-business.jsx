@@ -1,7 +1,6 @@
 import { Form, useOutletContext, useNavigation, redirect } from "react-router-dom"
 import { FaLink, FaFacebook, FaTwitter, FaTiktok, FaInstagram, FaLinkedinIn } from "react-icons/fa6"
 
-
 export async function action({ request }) {
     const body = await request.formData()
   
@@ -21,7 +20,7 @@ export async function action({ request }) {
         const newBusiness = await response.json()
      
       if (!newBusiness.name) {
-          return redirect(`/?msg=notcreated`)
+          throw new Error(newBusiness.error)
        }
       
       return redirect(`/business/${newBusiness.name}`)
