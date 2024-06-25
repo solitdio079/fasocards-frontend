@@ -20,11 +20,13 @@ export async function action({ request }) {
         })
         const newBusiness = await response.json()
      
-      if (!newBusiness.name) {
-          throw new Error("Erreure. Reesayez!")
-       }
+      if (newBusiness.name) {
+         return redirect(`/business/${newBusiness.name}`)
+         
+      }
+      throw new Error('Erreure. Reesayez!')
       
-      return redirect(`/business/${newBusiness.name}`)
+     
       
     } catch (error) {
       console.log(error.message)
