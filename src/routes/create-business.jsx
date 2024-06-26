@@ -18,7 +18,7 @@ export async function action({ request }) {
   if (body.get('address').trim().length === 0) {
     throw new Error("Veuillez remplir le champ 'Adresse'")
   }
-    //const bodyObject = Object.fromEntries(body)
+  //const bodyObject = Object.fromEntries(body)
   
     try {
         const response = await fetch('https://api.fasocard.com/business/', {
