@@ -9,10 +9,7 @@ export async function action({ request }) {
   if (body.get('description').length <= 20) {
     throw new Error("La description dit etre min 20 characters!")
   }
-  // email check
-  if (!body.get('email').contains("@")) {
-    throw new Error('Email invalid')
-  }
+ 
   // country check
   if (body.get('country').trim().length === 0) {
     throw new Error("Veuillez remplir le champ 'Pays'")
