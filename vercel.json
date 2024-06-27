@@ -1,8 +1,9 @@
 {
-  "routes": [
+  "redirects": [
     {
-      "src": "/(.*).html",
-      "dest": "/index.html"
+      "source": "/(.*).html",
+      "destination": "/index.html",
+      "permanent": true
     }
   ],
 
