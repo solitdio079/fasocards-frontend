@@ -1,8 +1,8 @@
 import {useState, useEffect} from 'react'
 import { NavLink, Outlet } from "react-router-dom"
 import logo from "../assets/dds-logo.png"
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+//import { Analytics } from '@vercel/analytics/react'
+//import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export default function Root() {
     const [user, setUser] = useState(null)
