@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import { NavLink, Outlet } from "react-router-dom"
-import logo from  "../assets/dds-logo.png"
+import logo from "../assets/dds-logo.png"
+import { Analytics } from '@vercel/analytics/react'
 
 export default function Root() {
     const [user, setUser] = useState(null)
