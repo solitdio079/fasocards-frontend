@@ -67,8 +67,19 @@ export default function SingleBusiness() {
                   </a>
                 </div>{' '}
               </h1>
-              <p className="text-sm badge badge-primary mx-1"><a href={`tel:${business.phone}`}><FaPhone/>{` ${business.phone}`}</a></p> {' '}
-              <p className="text-sm badge badge-info mx-1"><FaLocationPin/>{` ${business.address + ' Pays:' + business.country}`}</p>
+              <p>
+                <a
+                  className="text-sm badge badge-primary mx-1"
+                  href={`tel:${business.phone}`}
+                >
+                  <FaPhone />
+                  {` ${business.phone}`}
+                </a>
+              </p>{' '}
+              <p className="text-sm badge badge-info mx-1">
+                <FaLocationPin />
+                {` ${business.address + ' Pays:' + business.country}`}
+              </p>
               <p className="text-sm"> {business.description} </p>
             </div>
             <div className="flex-row items-start">
