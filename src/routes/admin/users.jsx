@@ -18,7 +18,7 @@ export async function action({ request }) {
           headers: {
             'Access-Control-Allow-Origin': 'https://api.fasocard.com',
             'Access-Control-Allow-Credentials': 'true',
-            'Coentent-Type': 'application/json'
+            'Content-Type': 'application/json'
             },
           body: JSON.stringify(fetcherObj)
         })
