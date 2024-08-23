@@ -4,14 +4,15 @@ import UserCard from '../../components/user-card'
 
 export async function action({ request }) {
     console.log("Inside action");
-    const fetcherBody = await request.formData()
-  const fetcherObj = Object.fromEntries(fetcherBody)
+  const fetcherBody = await request.formData()
+  const fetcherObj = Object.fromEntries(fetcherBody) 
+  //const { isAdmin, isAllowed } = fetcherObj
   console.log(JSON.stringify(fetcherObj))
 
-    const url = `https://api.fasocard.com/admin/users/patch/${fetcherObj.id}`
+    const url = `https://api.fasocard.com/admin/users/put/${fetcherObj.id}`
     try {
         const response = await fetch(url, {
-          method:"PATCH",
+          method:"PUT",
           mode: 'cors',
           credentials: 'include',
           headers: {
