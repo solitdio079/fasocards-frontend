@@ -24,7 +24,7 @@ export async function action({ request }) {
         })
 
         const updated = await response.json()
-        console.log(updated)
+        console.log(updated,'response from server')
         return updated
         
     } catch (error) {
