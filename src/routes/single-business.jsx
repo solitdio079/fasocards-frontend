@@ -11,7 +11,6 @@ import {
 } from 'react-icons/fa6'
 import hero2 from '../assets/hero2.jpeg'
 
-
 export async function loader({ params }) {
     try {
          const response = await fetch(

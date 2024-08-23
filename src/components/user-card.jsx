@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
-import {useFetcher} from 'react-router-dom'
+import {useFetcher, useSubmit} from 'react-router-dom'
 
 export default function UserCard({ user }) {
-    const fetcher = useFetcher()
+  const fetcher = useFetcher()
+  const submit = useSubmit()
     return (
       <div className="card w-96 bg-base-100 shadow-xl m-2">
         <div className="card-body">
@@ -15,15 +16,26 @@ export default function UserCard({ user }) {
             <fetcher.Form method="post">
               <input type="hidden" name="id" value={user._id} />
               <input type="hidden" name="email" value={user.email} />
-             
-                <input
-                  name="isAllowed"
-                  type="checkbox"
-                  defaultChecked={user.isAllowed}
-                  className="checkbox checkbox-md checkbox-info m-1"
-                        />
-                        <button type="submit" className='btn btn-primary btn-xs m-1'>Switch</button>
-              
+
+              <input
+                name="isAdmin"
+                type="checkbox"
+                defaultChecked={user.admin}
+                className="checkbox checkbox-md checkbox-primary m-1"
+                onChange={(event) => {
+                  submit(event.currentTarget.form)
+                }}
+              />
+
+              <input
+                name="isAllowed"
+                type="checkbox"
+                defaultChecked={user.isAllowed}
+                className="checkbox checkbox-md checkbox-info m-1"
+                onChange={(event) => {
+                  submit(event.currentTarget.form)
+                }}
+              />
             </fetcher.Form>
           </div>
         </div>

@@ -61,7 +61,6 @@ export async function loader() {
 export default function Users() {
   const users = useLoaderData()
   const navigation = useNavigation()
-    console.log(users)
   return (
     <>
       <div className="flex flex-col lg:flex-row">
