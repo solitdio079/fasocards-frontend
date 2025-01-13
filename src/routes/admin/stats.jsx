@@ -23,7 +23,7 @@ export async function loader() {
 
 export default function Stats() {
   const stats = useLoaderData()
-  const data = stats.data[0]
+  const data = stats.data ? stats.data[0] : null
   return (
     <>
       {data ? (
