@@ -32,7 +32,7 @@ export default function Admin() {
               </li>
               <li>
                 <NavLink
-                  to={user.isAdmin ? '/admin' : '/admin/users'}
+                  to={user.isAdmin ? '/admin/users' : '/'}
                   className={({ isActive, isPending }) =>
                     isActive
                       ? 'bg-primary text-white'
@@ -48,7 +48,7 @@ export default function Admin() {
               </li>
               <li>
                 <NavLink
-                  to={user.isAdmin ? '/admin' : '/admin/businessList'}
+                  to={user.isAdmin ? '/admin/businessList' : '/'}
                   className={({ isActive, isPending }) =>
                     isActive
                       ? 'bg-primary text-white'
