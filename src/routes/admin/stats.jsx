@@ -1,4 +1,4 @@
-import { useLoaderData } from 'react-router-dom'
+import { useLoaderData,Link } from 'react-router-dom'
 
 export async function loader() {
   try {
@@ -25,26 +25,34 @@ export default function Stats() {
   const stats = useLoaderData()
   const data = stats.data[0]
   return (
-    <div className="flex items-center w-full">
-      <div className="stats stats-vertical lg:stats-horizontal shadow mx-auto">
-        <div className="stat place-items-center">
-          <div className="stat-title">Business</div>
-          <div className="stat-value">{data.totalBusiness}</div>
-          <div className="stat-desc">Since Creation</div>
-        </div>
+    <>
+      {data ? (
+        <div className="flex items-center w-full">
+          <div className="stats stats-vertical lg:stats-horizontal shadow mx-auto">
+            <div className="stat place-items-center">
+              <div className="stat-title">Business</div>
+              <div className="stat-value">{data.totalBusiness}</div>
+              <div className="stat-desc">Since Creation</div>
+            </div>
 
-        <div className="stat place-items-center">
-          <div className="stat-title">Utilisateurs</div>
-          <div className="stat-value text-primary">{data.totalUsers}</div>
-          <div className="stat-desc text-primary">↗︎ 40 (2%)</div>
-        </div>
+            <div className="stat place-items-center">
+              <div className="stat-title">Utilisateurs</div>
+              <div className="stat-value text-primary">{data.totalUsers}</div>
+              <div className="stat-desc text-primary">↗︎ 40 (2%)</div>
+            </div>
 
-        <div className="stat place-items-center">
-          <div className="stat-title">Nouveau Utilisateurs</div>
-          <div className="stat-value">{data.newUsers}</div>
-          <div className="stat-desc">↘︎ 90 (14%)</div>
+            <div className="stat place-items-center">
+              <div className="stat-title">Nouveau Utilisateurs</div>
+              <div className="stat-value">{data.newUsers}</div>
+              <div className="stat-desc">↘︎ 90 (14%)</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      ) : (
+        <Link to={'/'} className="btn btn-primary">
+          Accueil
+        </Link>
+      )}
+    </>
   )
 }
