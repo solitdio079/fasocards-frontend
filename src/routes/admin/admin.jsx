@@ -3,13 +3,10 @@ import {
   NavLink,
   Link,
   useOutletContext,
-  useNavigate,
 } from 'react-router-dom'
 import { FaUserGroup, FaChartLine, FaGear } from 'react-icons/fa6'
 export default function Admin() {
   const [user] = useOutletContext()
-  const navigate = useNavigate()
-  if (!user || !user.isAdmin) navigate(-1)
   return (
     <>
       {!user || !user.isAdmin ?  
