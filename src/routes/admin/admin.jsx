@@ -11,12 +11,11 @@ export default function Admin() {
     <>
       {!user || !user.isAdmin ? (
         <div className="flex flex-col lg:flex-row justify-between m-5 p-5">
-          ,i.ç
           <div className="max-w-1/3">
             <ul className="menu bg-base-200 rounded-box">
               <li>
                 <NavLink
-                  to={user.isAdmin ? '/admin' : '/'}
+                  to={user && user.isAdmin ? '/admin' : '/'}
                   className={({ isActive, isPending }) =>
                     isActive
                       ? 'bg-primary text-white'
@@ -32,7 +31,7 @@ export default function Admin() {
               </li>
               <li>
                 <NavLink
-                  to={user.isAdmin ? '/admin/users' : '/'}
+                  to={user && user.isAdmin ? '/admin/users' : '/'}
                   className={({ isActive, isPending }) =>
                     isActive
                       ? 'bg-primary text-white'
@@ -48,7 +47,7 @@ export default function Admin() {
               </li>
               <li>
                 <NavLink
-                  to={user.isAdmin ? '/admin/businessList' : '/'}
+                  to={user && user.isAdmin ? '/admin/businessList' : '/'}
                   className={({ isActive, isPending }) =>
                     isActive
                       ? 'bg-primary text-white'
