@@ -1,6 +1,7 @@
 import {
   Outlet,
   NavLink,
+  Link,
   useOutletContext,
   useNavigate,
 } from 'react-router-dom'
@@ -11,6 +12,7 @@ export default function Admin() {
   if (!user || !user.isAdmin) navigate(-1)
   return (
     <>
+      {!user || !user.isAdmin ?  
       <div className="flex flex-col lg:flex-row justify-between m-5 p-5">
         <div className="max-w-1/3">
           <ul className="menu bg-base-200 rounded-box">
@@ -68,6 +70,7 @@ export default function Admin() {
           <Outlet />
         </div>
       </div>
+      : <Link to={"/"} className="btn btn-primary">Accueil</Link> }
     </>
   )
 }
