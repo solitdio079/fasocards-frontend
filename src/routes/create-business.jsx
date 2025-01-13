@@ -3,21 +3,7 @@ import { FaLink, FaFacebook, FaTwitter, FaTiktok, FaInstagram, FaLinkedinIn } fr
 
 export async function action({ request }) {
   const body = await request.formData()
-  body.set('name', body.get('name').trim())
-
-  // Description check
-  if (body.get('description').length <= 20) {
-    throw new Error("La description dit etre min 20 characters!")
-  }
  
-  // country check
-  if (body.get('country').trim().length === 0) {
-    throw new Error("Veuillez remplir le champ 'Pays'")
-  }
-  // address check
-  if (body.get('address').trim().length === 0) {
-    throw new Error("Veuillez remplir le champ 'Adresse'")
-  }
   //const bodyObject = Object.fromEntries(body)
   
     try {
