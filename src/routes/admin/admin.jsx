@@ -9,7 +9,7 @@ export default function Admin() {
   const [user] = useOutletContext()
   return (
     <>
-      {!user || !user.isAdmin ? (
+      {user && user.isAdmin ? (
         <div className="flex flex-col lg:flex-row justify-between m-5 p-5">
           <div className="max-w-1/3">
             <ul className="menu bg-base-200 rounded-box">
